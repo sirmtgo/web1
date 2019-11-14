@@ -5,7 +5,7 @@ transportApp.run(function ($rootScope) {
     
     $rootScope.ladders = [{
         "index": 14,
-        "end": 48
+        "end": 47
     }, {
         "index": 19,
         "end": 60
@@ -18,12 +18,21 @@ transportApp.run(function ($rootScope) {
     }, {
         "index": 32,
         "end": 56
+    }, {
+        "index": 4,
+        "end": 20
+    }, {
+        "index": 92,
+        "end": 93
+    }, {
+        "index": 38,
+        "end": 66
     }];
     $rootScope.snakes = [{
         "index": 99,
         "end": 29
     }, {
-        "index": 47,
+        "index": 48,
         "end": 18
     }, {
         "index": 25,
@@ -31,6 +40,12 @@ transportApp.run(function ($rootScope) {
     }, {
         "index": 70,
         "end": 46
+    }, {
+        "index": 61,
+        "end": 35
+    }, {
+        "index": 87,
+        "end": 54
     }];
     $rootScope.board = {};
     $rootScope.activeSquare = {};
