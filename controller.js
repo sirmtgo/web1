@@ -19,8 +19,8 @@ transportApp.run(function ($rootScope) {
         "index": 32,
         "end": 56
     }, {
-        "index": 4,
-        "end": 20
+        "index": 73,
+        "end": 81
     }, {
         "index": 92,
         "end": 93
@@ -46,6 +46,9 @@ transportApp.run(function ($rootScope) {
     }, {
         "index": 87,
         "end": 54
+    }, {
+        "index": 4,
+        "end": 1
     }];
     $rootScope.board = {};
     $rootScope.activeSquare = {};
