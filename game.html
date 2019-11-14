@@ -1,0 +1,59 @@
+<html ng-app="snlApp" class="ng-scope">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Padre Cícero e Lampião</title>
+    <script src="angular.js">
+    </script>
+    <script src="angular-route.js">
+    </script>
+    <script src="controller.js">
+    </script>
+      <link href="css/game.css" rel="stylesheet">
+
+  </head>
+  <body class="center">
+<div class="welcome">
+<div class="header">Padre Cícero e Lampião</div>
+<div class="iblock" ng-hide="showBoard">
+<ul class="game-options" ng-controller="GameCtrl">
+<li ng-click = "setSettings(1)">Jogador vs Computador</li>
+<li ng-click = "setSettings(2)">Dois Jogadores</li>
+</ul>
+</div>
+
+</div>
+   <div ng-controller="BoardCtrl" class="ng-scope snl-cont" ng-show="showBoard">
+      <ul class="snl-board">
+        <li class="snl-square ng-scope ng-binding" ng-class="{fright : square.isEven === true,snake: square.start > square.end, ladder:square.start < square.end, p0active:square.start === players[0].currentPos,p1active:square.start === players[1].currentPos}" ng-repeat="square in board">{{square.end + 1}}</li>
+   </ul>
+  </div>
+  <div class="bg-loader" ng-show="isLoading"></div>
+<div class="loader-cont" ng-show="isLoading"><div class="loader-content">{{isLoadingText}}</div></div>
+  <div ng-controller="BtnCtrl" class="ng-scope" ng-show="showBoard"> 
+    <!--<button ng-click="rollDice()">
+      Roll Dice
+    </button>
+    <div>
+      {{diceValues[0]}}
+    </div>
+    <div>
+      {{diceValues[1]}}
+    </div>
+    <button ng-click="makeMove(0)">
+      Make Move p1
+    </button>
+	<button ng-click="makeMove(1)">
+      Make Move p2
+    </button> -->
+	<button class="playGame" ng-click="startGame()" ng-hide="gameOver">
+      Turno do Jogador {{currentPlayer+1}}
+    </button>
+	<div ng-show="gameOver">Jogador {{winner}} Venceu!!!11!</div>
+  </div>
+  
+  
+  
+  
+</body></html>
